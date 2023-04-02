@@ -1,5 +1,3 @@
-
-
 import torch
 from torch import nn
 from layers import PatchEmbedding, TransformerEncoder
