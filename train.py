@@ -1,7 +1,14 @@
 if __name__ == "__main__":
+    import os
+    import zipfile 
+    import requests
     import argparse
+    from pathlib import Path
 
     parser = argparse.ArgumentParser()
+    parser.add_argument("--model", type=str)
+    # Download a custom dataset by providing a url
+    parser.add_argument("--dataset_url", type=str)
     # Parameters for ViT model
     parser.add_argument("--patch_size", type=int, default=16)
     parser.add_argument("--embedding_dim", type=int, default=768)
@@ -19,5 +26,7 @@ if __name__ == "__main__":
     parser.add_argument("--betas", nargs='+', type=float, default=(0.9, 0.999))
     parser.add_argument("--weight_decay", type=float, default=0.1)
     args = parser.parse_args()
+
+    
 
 
