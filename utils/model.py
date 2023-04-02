@@ -56,8 +56,4 @@ class ViT(nn.Module):
     out = self.transformer_encoder(xp)
     
     return self.mlp_head(out[:, 0, :])
-  
-if __name__ == "__main__":
-  image = torch.randn(3, 224, 224)
-  model = ViT()
-  print(model(image.unsqueeze(0)).shape)
+
