@@ -1,6 +1,6 @@
 """
-data_setup.py, contains functionality for instantiating PyTorch Dataloaders for 
-image classification on custom dataset. 
+data_setup.py, contains functionality for creating PyTorch Dataloaders for 
+image classification. 
 """
 
 import os
